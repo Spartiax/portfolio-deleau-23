@@ -1,0 +1,73 @@
+@use '../assets/mixins';
+@use '../assets/colors';
+@use '../assets/fonts';
+
+nav{
+    // background-color: red;
+    height: 10vh;
+    width: 100vw;
+    z-index: 20 !important;
+    position: absolute;
+}
+
+a{
+    font-family: fonts.$font;
+    color: colors.$color-text-link;
+    text-decoration: none;
+}
+.nav-link{
+    height: 10vh;
+    position: fixed;
+    width: 100vw;
+    @include mixins.flex-center;
+    // background: blue;
+}
+.nav-link-cv{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cv{
+    margin-left: 15px;
+}
+
+.nav-link-reseaux{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-instagram{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.box-linkedin{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.reseaux-social{
+    font-size: 20px;
+    border: 1px solid colors.$color-text;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background-color .3s ease-in-out;
+}
+
+.reseaux-social:hover{
+    background: colors.$color-text;
+    color: colors.$color-background;
+}

@@ -1,0 +1,75 @@
+@use '../assets/mixins';
+@use '../assets/colors';
+@use '../assets/fonts';
+
+.vide{
+    height: 40vh;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left{
+    width: 50%;
+    padding: 30px;
+    height: 200px;
+    position: sticky;
+    text-align: justify;
+    top: 30vh;
+
+    h2{
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+}
+
+.left p, .left h2{
+    color: colors.$color-text;
+}
+
+.right{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.right img{
+    height: 300px;
+}
+
+@media screen and (max-width : 1000px) {
+
+    .container{
+        flex-direction: column; 
+    }
+
+    .left{
+        position: relative;
+        height: auto;
+        width: 100%;
+        /* background: blue; */
+        top: 0;
+    }
+    .right{
+        /* background: red; */
+        align-content: center;
+        width: 100%;
+    }
+
+    .right img{
+        height: 42vh;
+    }
+
+
+}
+

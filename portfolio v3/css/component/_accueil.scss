@@ -1,0 +1,146 @@
+@use '../assets/mixins';
+@use '../assets/colors';
+@use '../assets/fonts';
+
+
+main{
+    @include mixins.font;
+    background-color: transparent;
+    color: colors.$color-text;
+    z-index: 1 !important;
+    /* overflow: hidden; */
+}
+
+.hero__text{
+    font-size: 30rem;
+    letter-spacing: -10px;
+    margin-top: 150px;
+    text-transform: uppercase;
+    line-height: 1;
+    z-index: 1;
+
+}
+
+.hero__gallery__info, .extra__info{
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    color: colors.$color-text;
+    z-index: 100;
+}
+
+html.lenis{
+    height: auto;
+}
+
+lenis.lenis-smooth{
+    scroll-behavior: initial;
+}
+
+lenis.lenis-smooth [data-lenis-prevent]{
+    overscroll-behavior: contain;
+}
+
+lenis.lenis-stopped{
+    overflow: hidden;
+}
+
+lenis.lenis-scrolling iframe{
+    pointer-events: none;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero__wrapper{
+    width: inherit;
+    height: inherit;
+}
+
+.hero__text{
+    position: fixed;
+    left: 0;
+    top: 0px;
+    padding: 1rem;
+    display: inline-flex;
+    width: max-content;
+    color: colors.$color-text;
+}
+
+/* Gallery Section */
+
+.hero__gallery{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.hero__gallery__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: inherit;
+
+    gap: 50rem;
+    padding-top: 55rem;
+    padding-bottom: 2rem;
+}
+
+.hero__gallery__figure{
+    position: relative;
+    width: 48rem;
+    height: 48rem;
+    z-index: 2;
+}
+
+.hero__gallery__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__gallery__info{
+    text-align: left;
+    padding: 0 32rem;
+    z-index: 2;
+}
+
+.hero__gallery__info__action{
+    margin-top: 2rem;
+    cursor: pointer;
+    color: colors.$color-text;
+    text-shadow: 0 0 20px #f0edba;
+}
+
+.extra{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    width: 100%;
+    z-index: -1;
+}
+
+.extra__info{
+
+    span{
+        animation: 2s fly infinite ease;
+        position: relative;
+        z-index: 100;
+
+        @keyframes fly {
+            0%, 100%{
+                transform: translateY(0);
+            }
+          
+            50%{
+                transform: translateY(10px);
+            }
+          }
+    }
+}

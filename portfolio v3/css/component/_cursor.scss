@@ -1,0 +1,27 @@
+@use '../assets/colors';
+
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    // background: rgb(251, 39, 255);
+    background: colors.$color-cursor;
+    transition: transform 0.1s;
+    transition-delay: 0.2ms;
+    /* Ajoute une transition pour une animation fluide */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 200;
+}
+
+ul li a:hover {
+    transform: scale(1.2);
+    /* Ajuste la taille au survol du lien */
+}
+
+.cursor.active {
+    transform: scale(4);
+}

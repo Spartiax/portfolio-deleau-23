@@ -1,0 +1,51 @@
+#progress{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+ #progress:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);  
+} 
+
+#progress.active{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#progress-value{
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background: transparent;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    img{
+        height: 25px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    #progress{
+        bottom: 0px;
+        right: 0px;
+        height: 60px;
+        width: 60px;
+    }
+    #progress-value{
+        img{
+            height: 20px;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+@use '../assets/mixins';
+@use '../assets/colors';
+@use '../assets/fonts';
+
+.menu {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 25px;
+    right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    transition: 0.6s all;
+    z-index: 50;
+    
+    &:hover {
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    }
+  
+  }
+  
+  .menu-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: white;
+    border-radius: 50%;*/
+    transition: 1s all;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+//   .menu-icon.menu-close {
+//     /*transform: rotate(540deg);*/
+//   }
+  
+  .menu-icon-bar1,
+  .menu-icon-bar2,
+  .menu-icon-bar3 {
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    top: 50%;
+    margin-top: -1px;
+    background-color: #231f20;
+    transition: 1s all;
+    z-index: 2;
+  }
+  
+  .menu-icon-bar1 {
+    transform: rotate(0deg) translate(0px, -6px);
+  }
+  
+  .menu-icon-bar2 {
+    opacity: 1;
+  }
+  
+  .menu-icon-bar3 {
+    transform: rotate(0deg) translate(0px, 6px);
+  }
+  
+  .menu-close .menu-icon-bar1 {
+    transform: rotate(45deg);
+  }
+  
+  .menu-close .menu-icon-bar2 {
+    opacity: 0;
+  }
+  
+  .menu-close .menu-icon-bar3 {
+    transform: rotate(-45deg);
+  }
+  
+  .menu-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: colors.$color-text;
+    border-radius: 50%;
+    z-index: 1;
+
+  }
+
+  
+
+  /* END MENU */
+  
+  
+  .link{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  a{
+    font-size: 18px;
+  }
+  
+  a.menu-items {
+    opacity: 0;
+    color: colors.$color-background;
+    position: relative;
+    margin-top: 5px;
+    bottom: 10px;
+    transition: all .5s ease;
+  }
+  
+  div.link {
+    height: 50px!important;
+    transform: scale(.15);
+    margin-top: 7px;
+    margin-right: 25px;
+  }
+  
+  div.link > a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    min-width: 100px;
+  }
+  
+  a.menu-items-active {
+    opacity: 1!important;
+    max-height: 50px;
+    text-decoration: none;
+  }

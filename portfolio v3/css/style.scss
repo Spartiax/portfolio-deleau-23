@@ -1,0 +1,30 @@
+@use "./component/cursor";
+@use "./component/nav";
+@use "./component/menu";
+@use "./component/reset";
+@use "./component/scroll-top";
+@use "./component/accueil";
+@use "./component/projets";
+@use "./component/competences";
+@use "./component/footer";
+
+
+
+
+
+
+
+
+
+
+@use './assets/mixins';
+@use './assets/colors';
+@use './assets/fonts';
+
+body{
+    height: 100%;
+    max-width: 100vw !important;
+    background-color: colors.$color-background;
+    font-family: fonts.$font;
+    overflow: hidden !important;
+  }
