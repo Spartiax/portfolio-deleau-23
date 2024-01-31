@@ -23,6 +23,11 @@ ul li a:hover {
   transform: scale(4);
 }
 
+@media screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+}
 nav {
   height: 10vh;
   width: 100vw;
@@ -99,12 +104,15 @@ a {
   .nav-link {
     justify-content: start;
     width: 100vw;
+    background: blue;
   }
   .nav-link-cv {
     width: 20%;
+    background: blue;
   }
   .nav-link-reseaux {
     width: 60%;
+    background: green;
   }
   .box-instagram {
     width: 50%;
@@ -445,9 +453,12 @@ lenis.lenis-scrolling iframe {
 }
 
 .hero__gallery__info {
+  width: 70vw;
   text-align: left;
   padding: 0;
   z-index: 2;
+  font-size: 4vw;
+  text-align: justify;
 }
 
 .hero__gallery__info__action {
@@ -459,7 +470,7 @@ lenis.lenis-scrolling iframe {
 
 .extra {
   position: fixed;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
   padding: 2rem;
   width: 100%;

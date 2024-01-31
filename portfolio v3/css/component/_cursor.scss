@@ -25,3 +25,9 @@ ul li a:hover {
 .cursor.active {
     transform: scale(4);
 }
+
+@media screen and (max-width: 1024px) {
+    .cursor{
+        display: none;
+    }
+}

@@ -104,9 +104,12 @@ lenis.lenis-scrolling iframe{
 }
 
 .hero__gallery__info{
+    width: 70vw;
     text-align: left;
     padding: 0;
     z-index: 2;
+    font-size: 4vw;
+    text-align: justify;
 }
 
 .hero__gallery__info__action{
@@ -118,7 +121,7 @@ lenis.lenis-scrolling iframe{
 
 .extra{
     position: fixed;
-    bottom: 0;
+    bottom: 30px;
     left: 0;
     padding: 2rem;
     width: 100%;
