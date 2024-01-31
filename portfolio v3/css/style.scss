@@ -12,6 +12,12 @@
 
 
 
+@use "./component/reveal";
+
+
+
+
+
 
 
 
@@ -23,7 +29,7 @@
 
 body{
     height: 100%;
-    max-width: 100vw !important;
+    min-width: 100%;
     background-color: colors.$color-background;
     font-family: fonts.$font;
     overflow: hidden !important;

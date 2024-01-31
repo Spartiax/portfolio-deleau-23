@@ -6,6 +6,7 @@ footer{
     height: 100vh;
     @include mixins.flex-center;
     z-index: 500;
+    background: colors.$color-background;
 }
 
 .container-left, .container-right{
@@ -114,7 +115,7 @@ footer{
     width: 60px;
     height: 60px;
     border-radius:50%;
-    background:#2196f3;
+    background:white;
     transition: width 0.5s, height 0.5s;
     transform: translate(-50%, -50%);
   }

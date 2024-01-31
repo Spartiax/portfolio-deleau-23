@@ -3,7 +3,6 @@
 @use '../assets/fonts';
 
 nav{
-    // background-color: red;
     height: 10vh;
     width: 100vw;
     z-index: 20 !important;
@@ -70,4 +69,23 @@ a{
 .reseaux-social:hover{
     background: colors.$color-text;
     color: colors.$color-background;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .nav-link{
+        background: blue;
+        justify-content: start;
+        width: 100vw;
+    }
+    .nav-link-cv{
+        width: 20%;
+        background: red;
+    }
+
+    .nav-link-reseaux{
+        background: green;
+        width: 60%;
+    }
 }

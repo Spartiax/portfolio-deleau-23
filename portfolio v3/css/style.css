@@ -4,7 +4,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #c3FFB7;
+  background: #E2E2DE;
   transition: transform 0.1s;
   transition-delay: 0.2ms;
   /* Ajoute une transition pour une animation fluide */
@@ -95,6 +95,21 @@ a {
   color: #191919;
 }
 
+@media screen and (max-width: 900px) {
+  .nav-link {
+    background: blue;
+    justify-content: start;
+    width: 100vw;
+  }
+  .nav-link-cv {
+    width: 20%;
+    background: red;
+  }
+  .nav-link-reseaux {
+    background: green;
+    width: 60%;
+  }
+}
 .menu {
   position: fixed;
   height: 50px;
@@ -280,6 +295,7 @@ table {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 0.4s ease-in-out, box-shadow 0.2s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 #progress:hover {
@@ -313,6 +329,7 @@ table {
   }
   #progress-value img {
     height: 20px;
+    mix-blend-mode: difference;
   }
 }
 main {
@@ -438,7 +455,7 @@ lenis.lenis-scrolling iframe {
 
 .extra__info span {
   animation: 2s fly infinite ease;
-  position: relative;
+  position: absolute;
   z-index: 100;
 }
 @keyframes fly {
@@ -450,6 +467,54 @@ lenis.lenis-scrolling iframe {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .hero__text {
+    font-size: 20rem;
+  }
+  .hero__gallery__wrapper {
+    gap: 30rem;
+  }
+  .hero__gallery__figure {
+    width: 35rem;
+    height: 35rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hero__text {
+    font-size: 15rem;
+  }
+  .hero__gallery__wrapper {
+    gap: 20rem;
+  }
+  .hero__gallery__figure {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hero__text {
+    font-size: 15rem;
+  }
+  .hero__gallery__wrapper {
+    gap: 20rem;
+  }
+  .hero__gallery__figure {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero__text {
+    font-size: 15rem;
+  }
+  .hero__gallery__wrapper {
+    gap: 20rem;
+  }
+  .hero__gallery__figure {
+    width: 15rem;
+    height: 15rem;
+  }
+}
 .vide {
   height: 40vh;
   width: 100%;
@@ -501,7 +566,7 @@ lenis.lenis-scrolling iframe {
   .left {
     position: relative;
     height: auto;
-    width: 100%;
+    width: 100vw;
     /* background: blue; */
     top: 0;
   }
@@ -533,7 +598,7 @@ lenis.lenis-scrolling iframe {
   top: 0%;
   width: 100%;
   height: 50vh;
-  background-color: rgb(255, 255, 255);
+  background-color: #E2E2DE;
   z-index: 9;
   overflow: hidden;
 }
@@ -550,10 +615,10 @@ lenis.lenis-scrolling iframe {
 
 #bottom {
   position: absolute;
-  bottom: 22px;
+  bottom: 4.7vh;
   width: 100%;
   height: 50vh;
-  background-color: rgb(255, 255, 255);
+  background-color: #E2E2DE;
   overflow: hidden;
 }
 
@@ -581,7 +646,7 @@ lenis.lenis-scrolling iframe {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  color: #fff;
+  color: #E2E2DE;
   gap: 4vh;
 }
 
@@ -603,7 +668,7 @@ lenis.lenis-scrolling iframe {
   width: 7vw;
   height: 2vw;
   border-radius: 50px;
-  background-color: #fff;
+  background-color: #E2E2DE;
   color: #0d0d0d;
 }
 
@@ -619,7 +684,7 @@ lenis.lenis-scrolling iframe {
   margin: 0 5px;
   height: 80px;
   gap: 50px;
-  filter: grayscale(1);
+  filter: grayscale(100%);
 }
 
 footer {
@@ -628,6 +693,7 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 500;
+  background: #191919;
 }
 
 .container-left, .container-right {
@@ -723,7 +789,7 @@ footer {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #2196f3;
+  background: white;
   transition: width 0.5s, height 0.5s;
   transform: translate(-50%, -50%);
 }
@@ -768,9 +834,21 @@ footer {
     font-size: 1.5rem;
   }
 }
+.reveal {
+  position: relative;
+  transform: translateY(130px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 body {
   height: 100%;
-  max-width: 100vw !important;
+  min-width: 100%;
   background-color: #191919;
   font-family: "Outfit";
   overflow: hidden !important;
