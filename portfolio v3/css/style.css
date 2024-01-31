@@ -97,17 +97,30 @@ a {
 
 @media screen and (max-width: 900px) {
   .nav-link {
-    background: blue;
     justify-content: start;
     width: 100vw;
   }
   .nav-link-cv {
     width: 20%;
-    background: red;
   }
   .nav-link-reseaux {
-    background: green;
     width: 60%;
+  }
+  .box-instagram {
+    width: 50%;
+    justify-content: center;
+  }
+  .box-linkedin {
+    width: 50%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 470px) {
+  .reseaux-social {
+    font-size: 15px;
+    border: 1px solid #E2E2DE;
+    position: absolute;
+    padding: 3px 5px;
   }
 }
 .menu {
@@ -433,7 +446,7 @@ lenis.lenis-scrolling iframe {
 
 .hero__gallery__info {
   text-align: left;
-  padding: 0 20rem;
+  padding: 0;
   z-index: 2;
 }
 
@@ -557,6 +570,7 @@ lenis.lenis-scrolling iframe {
 
 .right img {
   height: 300px;
+  max-width: 50vw;
 }
 
 @media screen and (max-width: 1000px) {
@@ -683,6 +697,7 @@ lenis.lenis-scrolling iframe {
 .img-competences img {
   margin: 0 5px;
   height: 80px;
+  width: 200px;
   gap: 50px;
   filter: grayscale(100%);
 }

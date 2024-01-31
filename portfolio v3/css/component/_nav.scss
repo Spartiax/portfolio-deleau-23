@@ -75,17 +75,34 @@ a{
 @media screen and (max-width: 900px) {
 
     .nav-link{
-        background: blue;
         justify-content: start;
         width: 100vw;
     }
     .nav-link-cv{
         width: 20%;
-        background: red;
     }
 
     .nav-link-reseaux{
-        background: green;
         width: 60%;
+    }
+
+    .box-instagram{
+        width: 50%;
+        justify-content: center;
+    }
+    
+    .box-linkedin{
+        width: 50%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    .reseaux-social{
+        font-size: 15px;
+        border: 1px solid colors.$color-text;
+        position: absolute;
+        padding: 3px 5px;
     }
 }
