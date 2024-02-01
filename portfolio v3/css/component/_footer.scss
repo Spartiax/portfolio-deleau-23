@@ -126,6 +126,13 @@ footer{
   }
   
 
+  @media screen and (max-width: 1366px) {
+    .contact::before{
+        opacity: .2;
+    }
+
+  }
+
   @media screen and (max-width: 1200px) {
         footer{
             flex-direction: column;
@@ -157,6 +164,11 @@ footer{
     .contact{
         font-size: 2rem;
     }
+    .container-left{
+        margin-top: 100px;
+        margin-bottom: -200px;
+        height: 20%;
+    }
 
 }
 
@@ -167,6 +179,30 @@ footer{
 
     .contact{
         font-size: 1.5rem;
+    }
+
+    .contact::before{
+        display: none;
+    }
+
+    .container-right{
+        max-height: 70%;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .container-left{
+        width: 80vw;
+    }
+
+}
+@media screen and (max-width: 440px) {
+    .container-left{
+        width: 102vw;
+    }
+
+    .infos{
+        width: 70vw;
     }
 
 }

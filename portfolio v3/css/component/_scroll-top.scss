@@ -33,6 +33,7 @@
     place-items: center;
     img{
         height: 25px;
+        mix-blend-mode: difference;
     }
 }
 
@@ -47,7 +48,16 @@
     #progress-value{
         img{
             height: 20px;
-            mix-blend-mode: difference;
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    #progress{
+       display: none;
+    }
+    #progress-value{
+        img{
+            height: 20px;
         }
     }
 }

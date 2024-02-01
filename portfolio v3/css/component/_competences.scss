@@ -11,7 +11,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: colors.$color-text;
+    background-color: colors.$color-background;
     overflow: hidden;
 }
 
@@ -81,22 +81,10 @@
 .content h3{
     width: 22%;
     font-size: 3vw;
-
     text-align: center;
-    font-weight: 400;
+    font-weight: 700;
 }
 
-.content .btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 7vw;
-    height: 2vw;
-    border-radius: 50px;
-    background-color: colors.$color-text;
-    color: #0d0d0d;
-
-}
 
 .content h2{
     font-size: 20vw;
@@ -110,11 +98,51 @@
     img{
         margin: 0 5px;
         height: 80px;
-        width: 200px;
+        max-width: 10vw;
         gap: 50px;
         filter: grayscale(100%);
     }
 }
 
 
+@media screen and (max-width: 900px) {
 
+    
+    #center{
+       height: 1000px;
+    }
+
+    .img-competences{
+
+        width: 300px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+    
+        img{
+            margin: 0 5px;
+            height: 80px;
+            max-width: 10vw;
+            min-width: 80px;
+            gap: 50px;
+        }
+    }
+}
+@media screen and (max-width: 830px) {
+
+    #bottom{
+        color: colors.$color-text;
+    }
+
+    .content h4{
+        font-size: 3vw;
+    
+    }
+    
+    .content h3{
+        font-size: 6vw;
+    }
+}

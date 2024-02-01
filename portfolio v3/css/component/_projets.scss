@@ -44,8 +44,9 @@
 }
 
 .right img{
-    height: 300px;
-    max-width: 50vw;
+    height: auto;
+    max-width: 40vw;
+    min-width: 30vw;
 }
 
 @media screen and (max-width : 1000px) {
@@ -68,9 +69,9 @@
     }
 
     .right img{
-        height: 42vh;
+        height: auto;
+        min-width: 80vw;
     }
 
 
 }
-
