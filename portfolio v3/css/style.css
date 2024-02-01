@@ -733,7 +733,7 @@ lenis.lenis-scrolling iframe {
     overflow: visible;
   }
   .img-competences img {
-    margin: 0 5px;
+    margin: 8px 10px;
     height: 80px;
     max-width: 10vw;
     min-width: 80px;
